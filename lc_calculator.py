@@ -80,7 +80,7 @@ def prob_calculator(infection_rate=0.02,lc_chance=0.1, lc_healrate_short=0.65,lc
 import argparse
 import numpy as np
 parser=argparse.ArgumentParser(description="args")
-parser.add_argument("--base-mode",type=str,default="realistic",help="base mode params, optimistic(opt), realistic(real), pessimistic(pessi)")
+parser.add_argument("--mode",type=str,default="realistic",help="base mode params, optimistic(opt), realistic(real), pessimistic(pessi)")
 parser.add_argument("--weekly-infection-rate",type=float,default=None,help="weekly infection rate")
 parser.add_argument("--infection-lc-chance",type=float,default=None,help="long covid chance at 1st infection")
 parser.add_argument("--healrate-s",type=float,default=None,help="long covid heal rate within 3 months")
@@ -95,12 +95,12 @@ parser.add_argument("--years",type=float,default=None,help="simulation years")
 args=parser.parse_args()
 # optimistic params
 param_sets=[]
-if args.base_mode in ["real","realistic"]:
-    param_sets=[0.03,0.13,0.65,0.25,0.015,0.5,0.01,0.3,0.002,0.01,50]
-if args.base_mode in ["opt","optimistic"]:
-    param_sets=[0.015,0.06,0.8,0.35,0.005,0.25,0,0.5,0.001,0.005,50]
-if args.base_mode in ["pess","pessimistic"]:
-    param_sets=[0.045,0.2,0.5,0.12,0.04,0.75,0.02,0,0.004,0.025,50]
+if args.mode in ["real","realistic"]:
+    param_sets=[0.03,0.13,0.65,0.2,0.015,0.5,0.01,0.3,0.002,0.01,50]
+if args.mode in ["opt","optimistic"]:
+    param_sets=[0.015,0.06,0.8,0.3,0.005,0.25,0,0.5,0.001,0.005,50]
+if args.mode in ["pess","pessimistic"]:
+    param_sets=[0.045,0.2,0.5,0.1,0.04,0.75,0.02,0,0.004,0.025,50]
     print(len(param_sets))
 if args.weekly_infection_rate is not None:
     param_sets[0]=args.weekly_infection_rate

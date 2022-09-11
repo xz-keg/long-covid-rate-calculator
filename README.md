@@ -7,6 +7,6 @@ Parameters:
     Source: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/2september2022
     infection-ic-rate: The UK’s National Institute for Health Care and Excellence (NICE) defines COVID-19 symptom duration with three categories: <4 weeks, 4–12 weeks, and >12 weeks),with the latter two categories both considered ‘long COVID’. The rate of you getting long covid() after each infection. 
     Source: https://www.nature.com/articles/s41467-022-30836-0
-    healrate-s: short term heal rate for long covid. 
-
+    healrate-s: short term heal rate for long covid. The proportion of 4-12 week LC transformed into recovery, or 1-proportion of 4-12 week LC transform into >12week LC. 
+    healrate-l: >12 week LC is hard to heal, but 
 ``python 
