@@ -6,7 +6,7 @@ Parameters:
 ``weekly-infection-rate``: The rate of you getting a new infection in any week. According to ONS data, this number averaged to be around 3% in UK in 2022. 
 Source: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/2september2022    
 
-``infection-ic-rate``: The UK’s National Institute for Health Care and Excellence (NICE) defines COVID-19 symptom duration with three categories: <4 weeks, 4–12 weeks, and >12 weeks),with the latter two categories both considered ‘long COVID’. The rate of you getting long covid() after each infection. 
+``infection-lc-chance``: The UK’s National Institute for Health Care and Excellence (NICE) defines COVID-19 symptom duration with three categories: <4 weeks, 4–12 weeks, and >12 weeks),with the latter two categories both considered ‘long COVID’. The rate of you getting long covid() after each infection. 
 
 Source: https://www.nature.com/articles/s41467-022-30836-0
 
@@ -49,3 +49,21 @@ For example
 ``python lc_calculator.py --mode realistic --infection-lc-rate 0.19``
 
 The default mode is ``realistic``.
+
+Sample Results under triple vaccination+BA.2-strength virus (LC: 13% per infection, death: 0.2% per infection)
+
+Year 1  LC: 9.77%  Death: 0.38%
+Year 2  LC: 16.00%  Death: 0.85%
+Year 3  LC: 21.40%  Death: 1.38%
+Year 5  LC: 30.29%  Death: 2.64%
+Year 7  LC: 37.27%  Death: 4.07%
+Year 10 LC: 45.19%  Death: 6.49%
+
+For activity-limiting LC (4.5% chance)
+
+Year 1 4.16%
+Year 2 7.91%
+Year 3 11.89%
+Year 5 19.97%
+Year 7 27.65%
+Year 10 37.55%

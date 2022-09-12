@@ -17,7 +17,7 @@ def prob_calculator(infection_rate=0.02,lc_chance=0.1, lc_healrate_short=0.65,lc
     lc_heal_weekly_chance=1-np.exp(np.log(1-lc_healrate_long)/52)
     #print(lc_heal_weekly_chance)
     # short-term lc transform to long-term lc/healthy under avg=3 months. 
-    lc_short_transform_weekly_chance=1/(13-1)
+    lc_short_transform_weekly_chance=1/(12-1)
     probs_by_covid_times=[]
     for i in range(max_infected+1):
         dic={'times_covid':i, 'total_chance':0, 'lc_short_chance':0,'lc_long_chance':0, 'healthy_chance':0, 'death_chance':0}
@@ -27,7 +27,7 @@ def prob_calculator(infection_rate=0.02,lc_chance=0.1, lc_healrate_short=0.65,lc
     probs_by_covid_times[0]['total_chance']=1
     probs_by_covid_times[0]['healthy_chance']=1
     chart=[]
-    print(lc_stack_max)
+    #print(lc_stack_max)
     for i in range(1,52*years+1):
         # for every week, update current lc healing status
 
@@ -96,9 +96,9 @@ args=parser.parse_args()
 # optimistic params
 param_sets=[]
 if args.mode in ["real","realistic"]:
-    param_sets=[0.03,0.13,0.65,0.2,0.015,0.5,0.01,0.3,0.002,0.01,50]
+    param_sets=[0.03,0.13,0.65,0.25,0.015,0.5,0.01,0.3,0.002,0.01,50]
 if args.mode in ["opt","optimistic"]:
-    param_sets=[0.015,0.06,0.8,0.3,0.005,0.25,0,0.5,0.001,0.005,50]
+    param_sets=[0.015,0.06,0.8,0.5,0.005,0.25,0,0.5,0.001,0.005,50]
 if args.mode in ["pess","pessimistic"]:
     param_sets=[0.045,0.2,0.5,0.1,0.04,0.75,0.02,0,0.004,0.025,50]
     print(len(param_sets))
