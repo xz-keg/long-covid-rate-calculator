@@ -77,3 +77,5 @@ Year 5 11.70%
 Year 7 15.08%
 
 Year 10 19.19%
+
+also add modes of variants (original, delta, BA.1, BA.2, BA.5) for calculation.

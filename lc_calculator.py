@@ -95,13 +95,21 @@ parser.add_argument("--years",type=float,default=None,help="simulation years")
 args=parser.parse_args()
 # optimistic params
 param_sets=[]
-if args.mode in ["real","realistic"]:
+if args.mode in ["real","realistic","BA.2"]:
     param_sets=[0.03,0.13,0.65,0.25,0.015,0.5,0.01,0.3,0.002,0.01,50]
 if args.mode in ["opt","optimistic"]:
     param_sets=[0.015,0.06,0.8,0.5,0.005,0.25,0,0.5,0.001,0.005,50]
 if args.mode in ["pess","pessimistic"]:
     param_sets=[0.045,0.2,0.5,0.1,0.04,0.75,0.02,0,0.004,0.025,50]
-    print(len(param_sets))
+if args.mode in ["original"]:
+    param_sets=[0.002,0.2,0.65,0.25,0.02,0.5,0.01,0.3,0.004,0.02,50]
+if args.mode in ["delta"]:
+    param_sets=[0.004,0.3,0.65,0.25,0.03,0.7,0.01,0.3,0.005,0.02,50]
+if args.mode in ["BA.1"]:
+    param_sets=[0.03,0.1,0.75,0.25,0.01,0.4,0.01,0.3,0.001,0.005,50]
+if args.mode in ["BA.5"]:
+    param_sets=[0.03,0.19,0.65,0.25,0.02,0.5,0.01,0.3,0.003,0.015,50]
+
 if args.weekly_infection_rate is not None:
     param_sets[0]=args.weekly_infection_rate
 if args.infection_lc_chance is not None:
