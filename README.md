@@ -3,6 +3,7 @@
 calculate the probability of you getting long covid after "living with virus" for years. 
 
 Parameters:
+
 ``weekly-infection-rate``: The rate of you getting a new infection in any week. According to ONS data, this number averaged to be around 3% in UK in 2022. 
 Source: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/2september2022    
 
@@ -78,4 +79,4 @@ Year 7 15.08%
 
 Year 10 19.19%
 
-also add modes of variants (original, delta, BA.1, BA.2, BA.5) for calculation.
+also support variants (``--mode original, delta, BA.1, BA.2, BA.5``) for calculation.
