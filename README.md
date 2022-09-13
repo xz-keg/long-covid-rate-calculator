@@ -50,7 +50,7 @@ For example
 
 The default mode is ``realistic``.
 
-Sample Results under triple vaccination+BA.2-strength virus (LC: 13% per infection, death: 0.2% per infection)
+Sample Results under triple vaccination+BA.2-strength virus (LC: 13% per infection, 1.5% bonus per prior infection, with 65% short-term heal rate(1% decrease per prior infection) and 25% annualized long term heal rate. Death: 0.2% per infection, 1% if you already have LC)
 
 Year 1  LC: 9.77%  Death: 0.38%
 
@@ -64,16 +64,16 @@ Year 7  LC: 37.27%  Death: 4.07%
 
 Year 10 LC: 45.19%  Death: 6.49%
 
-For activity-limiting LC (4.5% chance)
+For activity-limiting LC (4.5% chance per infection, 0.4% chance bonus per prior infection, 10% max per infection)
 
-Year 1 4.16%
+Year 1 3.47%
 
-Year 2 7.91%
+Year 2 5.79%
 
-Year 3 11.89%
+Year 3 7.90%
 
-Year 5 19.97%
+Year 5 11.70%
 
-Year 7 27.65%
+Year 7 15.08%
 
-Year 10 37.55%
+Year 10 19.19%
