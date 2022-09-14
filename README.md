@@ -79,4 +79,4 @@ Year 7 15.08%
 
 Year 10 19.19%
 
-also support variants (``--mode original, delta, BA.1, BA.2, BA.5``) for calculation.
+also support variants (``--mode original, delta, BA.1, BA.2, BA.5``https://www.medrxiv.org/content/10.1101/2022.09.04.22279588v1) for calculation.
